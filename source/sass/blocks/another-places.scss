@@ -1,0 +1,71 @@
+.another-places {
+  padding-left: 8px;
+  padding-right: 38px;
+  border-right: 1px solid #d7d9df;
+}
+
+.another-places__title {
+  color: $dark;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.another-places__list {
+  @include list;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.another-places__item {
+  margin-top: 3px;
+}
+
+.another-places__item:not(:last-child) {
+  margin-right: 33px;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .another-places {
+    padding-right: 49px;
+    border-right: 1px solid #d7d9df;
+    flex: 1;
+  }
+
+  .another-places__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .another-places {
+    text-align: center;
+    padding: 0;
+
+    border: none;
+    border-bottom: 1px solid #d7d9df;
+    margin: 0 10px;
+    padding-bottom: 20px;
+    margin-top: 55px;
+  }
+
+  .another-places__list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .another-places__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .another-places__item:not(:last-child) {
+    margin-right: 11px;
+    margin-bottom: 6px;
+  }
+
+}

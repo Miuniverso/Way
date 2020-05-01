@@ -1,0 +1,29 @@
+.main-footer {
+  max-width: 1169px;
+  margin: 0 auto;
+  margin-top: 170px;
+  margin-bottom: 62px;
+  padding: 0 5px;
+  display: flex;
+  // justify-content: space-between;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .main-footer {
+    flex-wrap: wrap;
+    padding: 0 17px;
+    margin-top: 80px;
+    margin-bottom: 34px;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .main-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+}

@@ -1,0 +1,175 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  @include list;
+
+  margin: 0;
+  margin-right: 6px;
+  padding: 0;
+
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 40px;
+}
+
+.nav__link {
+  color: $dark;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav__link--active {
+  color: $rose;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -11px;
+
+    width: 16px;
+    height: 20px;
+    transition: rotate(-18deg);
+
+    background-image: url("../img/cursor.svg");
+  }
+}
+
+.nav__tel {
+  color: $rose;
+
+  margin-left: 44px;
+  letter-spacing: 1px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -41px;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/phone.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .nav {
+    flex-direction: column;
+    display: block;
+    width: 100%;
+    background-color: white;
+    top: 51px;
+    left: 0;
+
+    padding: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin-bottom: 30px;
+    margin-right: 0;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .nav__link {
+    display: block;
+    position: relative;
+
+    color: $nav-link;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+    padding: 17px 0 17px 21px;
+
+    background-color: $nav-link-bg;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      background-image: url("../img/arrow-right.svg");
+      width: 25px;
+      height: 25px;
+      right: 24px;
+    }
+  }
+
+  .nav__tel {
+    display: none;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .nav {
+    flex-direction: column;
+    display: block;
+    width: 100%;
+    background-color: white;
+    top: 51px;
+    left: 0;
+
+    padding: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin-bottom: 30px;
+    margin-right: 0;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .nav__link {
+    display: block;
+    position: relative;
+
+    color: $nav-link;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+    padding: 17px 0 17px 16px;
+
+    background-color: $nav-link-bg;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      background-image: url("../img/arrow-right.svg");
+      width: 25px;
+      height: 25px;
+      right: 24px;
+    }
+  }
+
+  .nav__tel {
+    display: none;
+  }
+}

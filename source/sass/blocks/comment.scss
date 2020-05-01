@@ -1,0 +1,68 @@
+.comment {
+  position: absolute;
+  right: -247px;
+  display: inline-block;
+  bottom: 114px;
+  width: 382px;
+  background-color: $white;
+  padding: 2px 30px;
+  padding-bottom: 28px;
+}
+
+.comment__title {
+  color: $light;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+
+  position: relative;
+  margin: 0;
+  padding-top: 30px;
+  margin-bottom: 36px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 68px;
+    height: 2px;
+    background-color: $rose;
+    left: 0;
+    bottom: -14px;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .comment {
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .comment {
+    max-width: 268px;
+    bottom: -39px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    text-align: center;
+
+    padding: 2px 20px;
+  }
+
+  .comment__title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+
+    &::after {
+      width: 68px;
+      height: 1px;
+      left: 78px;
+    }
+  }
+}

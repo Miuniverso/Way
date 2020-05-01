@@ -1,0 +1,25 @@
+.tabs__item {
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  text-align: left;
+  padding-bottom: 14px;
+
+  &:not(:last-child) {
+    padding-right: 100px;
+  }
+}
+
+#greece:checked ~ .info__panels .greece-panel,
+#albania:checked ~ .info__panels .albania-panel,
+#macedonia:checked ~ .info__panels .macedonia-panel,
+#montenegro:checked ~ .info__panels .montenegro-panel,
+#croatia:checked ~ .info__panels .croatia-panel {
+  display:block
+}
+
+#greece:checked ~ .tabs .greece-tab,
+#albania:checked ~ .tabs .albania-tab,
+#macedonia:checked ~ .tabs .macedonia-tab,
+#montenegro:checked ~ .tabs .montenegro-tab,
+#croatia:checked ~ .tabs .croatia-tab {
+  color: $orange;
+}

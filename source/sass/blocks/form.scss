@@ -1,0 +1,171 @@
+.form {
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+  background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 50px 50px;
+}
+
+.form__title {
+  color: $dark;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 32px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.form__subtitle {
+  color: $dark;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin: 0;
+  margin-top: 12px;
+}
+
+.form__list {
+  @include list;
+
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form__item {
+  position: relative;
+
+  &--tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--tel::before {
+    content: "+ 7";
+    width: 31px;
+    position: absolute;
+    z-index: 2;
+    left: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark;
+  }
+
+  &--tel::after {
+    content: "*";
+    width: 31px;
+    position: absolute;
+    z-index: 2;
+    left: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $rose;
+    margin-top: -9px;
+  }
+}
+
+.form__input {
+  position: relative;
+
+  outline: none;
+  border: none;
+  padding: 15px 15px 15px 0;
+
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  min-width: 269px;
+
+  color: $dark;
+  font-size: 14px;
+  font-weight: 400;
+
+  &[type="tel"] {
+    padding-left: 50px;
+    position: relative;
+  }
+
+  &[type="email"] {
+    padding-left: 15px;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $rose;
+  }
+}
+
+.form__btn {
+  @include button;
+  padding: 19px 83px;
+  margin-top: 20px;
+  font-size: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .form {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+
+    align-items: stretch;
+
+    padding: 50px 15px;
+  }
+
+  .form__subtitle {
+    margin-top: 20px;
+  }
+
+  .form__list {
+    width: auto;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+    width: 100%;
+  }
+
+  .form__item {
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--tel::before {
+      left: 20px;
+
+    }
+
+    &--tel::after {
+      left: 7px;
+    }
+  }
+
+  .form__input {
+    min-width: 100%;
+  }
+
+  .form__btn {
+    padding: 20px 40px;
+    margin-top: 20px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

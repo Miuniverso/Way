@@ -1,0 +1,167 @@
+.content__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+
+  position: relative;
+
+  margin-right: 246px;
+  margin-top: 49px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 1443px;
+    height: 1089px;
+    z-index: -1;
+
+    top: 54px;
+    left: -137px;
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    &::before {
+      background-image: url("../img/bg@2x.png");
+    }
+  }
+}
+
+.content__title {
+  margin: 0;
+  position: relative;
+  margin-top: 46px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 177px;
+    height: 4px;
+    background-color: $rose;
+    left: 0;
+    bottom: -23px;
+  }
+}
+
+.content__desc {
+  color: rgba(44, 46, 63, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.47px;
+  line-height: 28px;
+
+  padding-right: 100px;
+  margin-top: 57px;
+}
+
+.content__img {
+  margin-top: 31px;
+  margin-right: 24px;
+}
+
+.content__btn {
+  @include button;
+
+  padding: 30px 40px;
+  margin-top: 34px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .content__wrapper {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    align-items: stretch;
+
+    margin-top: -16px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .content__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .content__desc {
+    padding: 0 20px;
+    margin-top: 21px;
+  }
+
+  .content__img {
+    min-width: 100%;
+    max-height: 415px;
+    object-fit:cover;
+  }
+
+  .content__btn {
+    padding: 19px 52px;
+    margin-top: 3px;
+
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .content__wrapper {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    align-items: stretch;
+
+    margin-top: 48px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .content__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+
+    margin-top: -24px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .content__desc {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 28px;
+
+    padding: 0 15px;
+    margin-top: 21px;
+  }
+
+  .content__btn {
+    padding: 19px 60px;
+    margin-top: 2px;
+  }
+
+  .content__img {
+    min-width: 100%;
+    max-height: 415px;
+    object-fit:cover;
+    margin-top: 50px;
+  }
+}

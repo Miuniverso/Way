@@ -1,0 +1,15 @@
+@mixin list {
+  list-style: none;
+}
+
+@mixin button {
+  background-color: $rose;
+  border: none;
+
+  color: $white;
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

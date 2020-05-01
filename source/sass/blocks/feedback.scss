@@ -1,0 +1,99 @@
+.feedback {
+  position: fixed;
+  z-index: 10;
+  width: 728px;
+  height: 444px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $nav-link-bg;
+  background-image: url("../img/popup-img@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 393px;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/popup-img@2x.jpg");
+    background-size: 338px;
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 58px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: $nav-link;
+}
+
+.feedback__form {
+  flex-direction: column;
+  margin: 0;
+  width: auto;
+}
+
+.feedback__form .feedback__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.feedback__btn-wrapper {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  cursor: pointer;
+}
+
+.feedback .form__input--tel::before {
+  left: 416px;
+}
+
+.feedback .form__input--tel::after {
+  left: 410px;
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .feedback {
+    width: 100%;
+    height: 100%;
+
+    background-color: $white;
+    background-image: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 16px;
+  }
+
+  .feedback__form {
+    width: 100%;
+  }
+
+  .form__btn {
+    width: 100%;
+  }
+
+  .feedback .form__input--tel::before {
+    left: 35px;
+  }
+
+  .feedback .form__input--tel::after {
+    left: 30px;
+  }
+}

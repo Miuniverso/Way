@@ -1,0 +1,109 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 89px;
+  padding-right: 41px;
+  border-right: 1px solid #d7d9df;
+}
+
+.contacts__title {
+  color: $dark;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.contacts__tel {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  text-decoration: underline;
+  color: $rose;
+
+  margin-top: 20px;
+  margin-left: 41px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/phone-gray.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    left: -40px;
+    top: -2px;
+  }
+}
+
+.contacts__mail {
+  color: $rose;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+
+  margin-left: 41px;
+  margin-top: 6px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 20px;
+    left: -40px;
+    top: -2px;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .contacts {
+    border: none;
+    padding: 0;
+
+    margin-left: 50px;
+    flex: 1;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .contacts {
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #d7d9df;
+    margin: 0 10px;
+    margin-top: 28px;
+    padding-bottom: 14px;
+    display: flex;
+  }
+
+  .contacts__mail {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .contacts__tel {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 41px;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      left: -21px;
+    }
+  }
+}

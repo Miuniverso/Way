@@ -1,0 +1,41 @@
+.col__list {
+  @include list;
+
+  margin: 0;
+  padding: 0;
+}
+
+.col__item {
+  min-width: 95px;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.col__link {
+  color: rgba(20, 21, 23, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .col__item {
+    min-width: 95px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .col__item {
+    min-width: 95px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+}

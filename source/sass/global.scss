@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
+
+body {
+  margin: 0 auto;
+
+  font-family: $font-primary;
+
+  min-width: $mobile;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 5px;
+}
+
+.title {
+  color: $light;
+  font-size: 55px;
+  font-weight: 600;
+  letter-spacing: -1.25px;
+  line-height: 80px;
+  position: relative;
+}
+
+.overlay {
+  opacity: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.btn-buy:hover,
+.btn-buy:focus,
+.btn-buy:active {
+  background-color: $orange;
+}
+
+
+@media (max-width: $tablet) {
+  .container {
+    max-width: 768px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,139 @@
+.main-header {
+  padding-top: 39px;
+  padding-bottom: 35px;
+
+  background-color: $white;
+
+  // display: flex;
+  max-width: 1180;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav {
+  padding-right: 15px;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .main-header {
+    padding: 0;
+    position: relative;
+  }
+
+  .main-header__container {
+    display: block;
+    padding: 0;
+  }
+
+  .main-header__wrapper {
+    align-items: stretch;
+  }
+
+  .main-header__link {
+    width: 44px;
+    height: 18px;
+  }
+
+  .main-header__logo {
+    margin-top: 18px;
+    margin-left: 20px;
+  }
+
+  .main-header__button {
+    display: block;
+
+    background-color: $rose;
+    background-image: url("../img/burger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 72px;
+    height: 50px;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-header__button--active {
+    display: block;
+    background-image: url("../img/cross-btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    width: 50px;
+    height: 52px;
+
+    border: none;
+  }
+}
+
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .main-header {
+    padding: 0;
+    position: relative;
+  }
+
+  .main-header__container {
+    display: block;
+    padding: 0;
+  }
+
+  .main-header__wrapper {
+    align-items: stretch;
+  }
+
+  .main-header__link {
+    width: 44px;
+    height: 18px;
+  }
+
+  .main-header__logo {
+    margin-top: 18px;
+    margin-left: 20px;
+  }
+
+  .main-header__button {
+    display: block;
+
+    background-color: $rose;
+    background-image: url("../img/burger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-header__button--active {
+    display: block;
+    background-image: url("../img/cross-btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    width: 50px;
+    height: 52px;
+
+    border: none;
+  }
+}
