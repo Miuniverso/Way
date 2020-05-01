@@ -90,6 +90,13 @@ gulp.task("js", function () {
     .pipe(gulp.dest("build/js"));
 })
 
+gulp.task("js-dev", function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("source/js"));
+})
+
 gulp.task("clean", async function () {
   return
   del("build");
@@ -143,4 +150,4 @@ gulp.task("refresh", function (done) {
 
 gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "sprite", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
-gulp.task("style", gulp.series("css-dev", "server-dev"));
+gulp.task("style", gulp.series("css-dev", "js-dev", "server-dev"));
