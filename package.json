@@ -9,7 +9,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start",
-    "style": "gulp style"
+    "dev": "gulp dev"
   },
   "author": "Yana Minaeva",
   "license": "ISC",

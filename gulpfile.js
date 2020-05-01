@@ -83,6 +83,15 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 })
 
+gulp.task("html-dev", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(rename("main.html"))
+    .pipe(gulp.dest("source"));
+})
+
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
     .pipe(uglify())
@@ -150,4 +159,4 @@ gulp.task("refresh", function (done) {
 
 gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "sprite", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
-gulp.task("style", gulp.series("css-dev", "js-dev", "server-dev"));
+gulp.task("dev", gulp.series("css-dev", "js-dev", "html-dev", "server-dev"));
